@@ -6,7 +6,7 @@ import pandas as pd
 import os
 import time
 
-API_KEY = "C5z3c4yphrBDGbIt3M0TqPJ0Ltu2Ekt4"
+API_KEY = os.environ.get("POLYGON_API_KEY", "")
 BASE = "https://api.polygon.io"
 
 

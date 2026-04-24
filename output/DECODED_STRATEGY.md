@@ -8,16 +8,16 @@
 
 | Metric | Value |
 |--------|-------|
-| Win Rate (>50% gain) | 42.2% |
-| Avg Max Gain | +64.0% |
-| Median Max Gain | +39.5% |
-| Avg Max Loss | -72.1% |
+| Win Rate (>50% gain) | 44.4% |
+| Avg Max Gain | +73.6% |
+| Median Max Gain | +43.5% |
+| Avg Max Loss | -69.0% |
 | Best trade | +384% (2026-01-21, level 6885.0) |
-| Worst trade | -100% (2026-03-12, level 6680.0) |
-| HERO Win Rate | 47.5% |
-| Normal PUT Win Rate | 31.0% |
-| Total Winners | 38 |
-| Total Losers | 75 |
+| Worst trade | -100% (2026-03-13, level 6680.0) |
+| HERO Win Rate | 45.9% |
+| Normal PUT Win Rate | 41.4% |
+| Total Winners | 40 |
+| Total Losers | 73 |
 
 ---
 
@@ -28,9 +28,9 @@ PUT HERO is Sniper's **high-conviction** trade label. Statistical comparison:
 | Metric | PUT HERO | Normal PUT |
 |--------|----------|------------|
 | Count | 61 | 29 |
-| Win Rate | 47.5% | 31.0% |
-| Avg Max Gain | +64.3% | +63.4% |
-| Avg OTM% | -0.41% | -0.61% |
+| Win Rate | 45.9% | 41.4% |
+| Avg Max Gain | +69.9% | +81.5% |
+| Avg OTM% | -0.41% | -0.54% |
 
 **Conclusion**: PUT HERO signals his **highest-probability setups** — trades where multiple confluences align (key support level, correct timing window, favorable volatility conditions). The HERO label functions as a confidence multiplier for subscribers, indicating they should size up or pay closer attention.
 
@@ -38,14 +38,14 @@ PUT HERO is Sniper's **high-conviction** trade label. Statistical comparison:
 
 ### Q2: Is "أدنى X" the strike OR the SPX trigger?
 
-- At alert time, SPX was **above** the stated level in only **18.4%** of cases
-- Average distance: SPX was **32.1 points BELOW** the stated level
+- At alert time, SPX was **above** the stated level in only **13.6%** of cases
+- Average distance: SPX was **31.0 points BELOW** the stated level
 - **Conclusion: The level functions as both a STRIKE PRICE and SPX REFERENCE**
 
-In 81.6% of cases, SPX had already dropped below or was at the stated level when the alert was posted. This means "أدنى 6920" is saying "the put strike zone is at/below 6920" — he enters the PUT when SPX is at or has broken through this level. The level IS the option strike (confirmed by Q4 at 97.8% match).
+In 86.4% of cases, SPX had already dropped below or was at the stated level when the alert was posted. This means "أدنى 6920" is saying "the put strike zone is at/below 6920" — he enters the PUT when SPX is at or has broken through this level. The level IS the option strike (confirmed by Q4 at 97.8% match).
 
 When SPX is below the level: the move has already started, he's confirming the entry.
-When SPX is above the level (18.4%): he's anticipating a move down to that support — a pre-positioning alert.
+When SPX is above the level (13.6%): he's anticipating a move down to that support — a pre-positioning alert.
 
 ---
 
@@ -94,7 +94,7 @@ The levels posted ("أدنى 6920") serve dual purpose — they are both the **S
 | Up Day % | 33.3% | 57.4% |
 
 **Pattern**: He avoids trading on days when:
-1. **Down/choppy days without clear levels** — silent days averaged -0.017% return and were up only 33.3% of the time vs 57.4% for active days
+1. **Down/choppy days without clear levels** — silent days averaged -0.017% return and were up only 33.3% vs 57.4% for active days
 2. **Low volatility / no setup** — market grinding higher with no support levels being tested
 3. **News/event uncertainty** — he explicitly mentions avoiding certain news-driven sessions
 
@@ -103,7 +103,7 @@ He only trades when there's a clear **support level to target** with a defined r
 ---
 
 ### ENTRY CONDITIONS:
-- **Time window**: 9:00 - 14:00 ET core window (most active 9:00-12:00 ET)
+- **Time window**: 9:00 - 15:00 ET core window (most active 9:00-12:00 ET)
 - **Trigger**: SPX approaches or breaks below a key support level ("أدنى X")
 - **Level selection**: Round-number support zones, prior day lows, significant technical levels
 - **Direction bias**: Overwhelmingly bearish (PUT-focused) — he trades pullbacks/breakdowns
@@ -119,7 +119,7 @@ The "أدنى X" level serves as both the SPX trigger AND the approximate PUT st
 - Most common is the combination of hourly close + hard price stop
 
 ### DAYS HE AVOIDS:
-- Strong up-trending days (no pullback to support)
+- Down/choppy days without clear levels — silent days averaged -0.017% return and were up only 33.3% vs 57.4% for active days
 - Days without clear technical support levels to target
 - Potentially high-uncertainty news days
 - Silent on 11.7% of trading days — discipline to NOT trade is part of the edge

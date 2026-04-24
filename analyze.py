@@ -14,12 +14,13 @@ import time
 import json
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-API_KEY = "C5z3c4yphrBDGbIt3M0TqPJ0Ltu2Ekt4"
+API_KEY = os.environ.get("POLYGON_API_KEY", "")
 BASE = "https://api.polygon.io"
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(REPO_DIR)
@@ -92,8 +93,10 @@ def parse_all_html():
 
             # Parse timestamp: "DD.MM.YYYY HH:MM:SS UTC+03:00"
             try:
-                dt_utc3 = datetime.strptime(time_raw[:19], "%d.%m.%Y %H:%M:%S")
-                dt_et = dt_utc3 - timedelta(hours=8)  # UTC+3 to ET = -8h
+                utc3 = ZoneInfo("Etc/GMT-3")
+                eastern = ZoneInfo("America/New_York")
+                dt_utc3 = datetime.strptime(time_raw[:19], "%d.%m.%Y %H:%M:%S").replace(tzinfo=utc3)
+                dt_et = dt_utc3.astimezone(eastern)
             except Exception:
                 continue
 
@@ -583,7 +586,7 @@ def answer_questions(df_all, df_enriched, spy_df):
             "exact_match_count": int(exact_match),
             "total_with_strikes": int(total_strikes),
             "exact_match_pct": round(exact_match / total_strikes * 100, 1) if total_strikes > 0 else 0,
-            "conclusion": "The level IS the option strike" if exact_match / total_strikes > 0.5 else "The level is an SPX support/trigger level"
+            "conclusion": ("The level IS the option strike" if exact_match / total_strikes > 0.5 else "The level is an SPX support/trigger level") if total_strikes > 0 else "Insufficient data"
         }
 
         # Show distribution of differences
