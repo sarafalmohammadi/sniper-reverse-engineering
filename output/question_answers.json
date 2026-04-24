@@ -1,0 +1,64 @@
+{
+  "Q1": {
+    "hero_count": 61,
+    "normal_count": 29,
+    "hero_avg_gain": 64.28852459016393,
+    "hero_median_gain": 46.6,
+    "hero_wr": 47.540983606557376,
+    "hero_avg_otm": -0.40949180327868845,
+    "hero_avg_time_to_max": 96.574043715847,
+    "hero_hours": {
+      "10": 14,
+      "11": 14,
+      "9": 12,
+      "12": 6,
+      "13": 6,
+      "14": 5,
+      "8": 3,
+      "7": 1
+    },
+    "normal_avg_gain": 63.372413793103455,
+    "normal_median_gain": 28.6,
+    "normal_wr": 31.03448275862069,
+    "normal_avg_otm": -0.6082307692307692
+  },
+  "Q2": {
+    "spx_above_level_count": 16,
+    "total_with_data": 87,
+    "spx_above_level_pct": 18.4,
+    "avg_distance_from_level": -32.1,
+    "median_distance_from_level": -38.6,
+    "conclusion": "ENTRY LEVEL"
+  },
+  "Q3": {
+    "trades_with_hourly_stop": 19,
+    "trades_with_price_stop": 33,
+    "total_trades": 213,
+    "hourly_stop_pct": 8.9,
+    "price_stop_pct": 15.5,
+    "both_stops": 10
+  },
+  "Q4": {
+    "exact_match_count": 88,
+    "total_with_strikes": 90,
+    "exact_match_pct": 97.8,
+    "conclusion": "The level IS the option strike",
+    "avg_strike_diff": -0.1,
+    "strike_diff_distribution": {
+      "0.0": 88,
+      "-5.0": 2
+    }
+  },
+  "Q5": {
+    "total_trading_days": 77,
+    "active_days": 68,
+    "silent_days": 9,
+    "silent_pct": 11.7,
+    "silent_avg_return": -0.017,
+    "active_avg_return": 0.081,
+    "silent_up_day_pct": 33.3,
+    "active_up_day_pct": 57.4,
+    "silent_avg_range": 1.001,
+    "active_avg_range": 1.146
+  }
+}
